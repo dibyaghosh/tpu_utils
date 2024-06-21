@@ -58,8 +58,8 @@ def prevent_cross_region(*urls):
 
     zone = get_vm_location()
     if zone is None:
-        logging.warning("Could not determine zone of VM. Skipping check.")
-        return
+        logging.warning("Could not determine zone of VM. Assuming code is not running on Google Cloud")
+        zone = "local" # Should error against any Google Cloud Bucket
     match = zone.rpartition("-")[0].upper()
     for url in urls:
         if url.startswith("gs://"):
