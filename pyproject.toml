@@ -16,7 +16,10 @@ classifiers = [
     "License :: OSI Approved :: MIT License",
     "Operating System :: OS Independent",
 ]
-
+dependencies = [
+    "requests",
+    'google-cloud-storage',
+]
 
 [project.urls]
 "Homepage" = "https://github.com/dibyaghosh/tpu_utils"
