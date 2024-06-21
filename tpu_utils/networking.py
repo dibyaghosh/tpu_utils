@@ -1,5 +1,6 @@
 import requests
 from google.cloud import storage
+import logging
 
 def prevent_cross_region(*urls):
     """
